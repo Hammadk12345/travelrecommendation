@@ -1,0 +1,284 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%; /* Ensure body and html take full height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute; /* Overlay the background */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make it full width */
+    z-index: 1000;
+    box-sizing: border-box; /* Includes padding in width calculations */
+
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+#itemList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#itemList li {
+    margin: 0 15px;
+}
+
+#itemList li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#itemList li input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#itemList li button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #006d77;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#itemList li button:hover {
+    background-color: #028090;
+}
+
+/* Hero Section */
+#homepage {
+    position: relative;
+    background-image: url('../images/bg3.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 5%;
+}
+
+#homecontent {
+    max-width: 600px;
+}
+
+#homepageh1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: rgb(25, 24, 24);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#homepageh4 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#homepagebutton {
+    background-color: #38b000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#homepagebutton:hover {
+    background-color: #28a745;
+}
+
+/* Social Links */
+#sociallinks {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+#sociallinks li {
+    margin: 10px 0;
+}
+
+#sociallinks a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#sociallinks a img {
+    width: 20px;
+    height: 20px;
+}
+
+#sociallinks a:hover {
+    transform: scale(1.1);
+    background-color: #006d77;
+}
+
+/* About Us Section */
+#aboutus {
+    position: relative;
+    background-image: url('../images/bg3.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #006d77;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 5%;
+}
+
+/* Add a transparent black background by using an additional div */
+#aboutus .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent black overlay */
+    z-index: -1;  /* Ensure it stays behind the content */
+}
+
+#aboutcontent {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#aboutpageh1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#aboutpagep {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#abouth2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;  /* Reduced gap between cards */
+    flex-wrap: nowrap;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 12px;  /* Reduced padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;  /* Even smaller card size */
+    flex: 1 1 200px;  /* Ensure cards stay in one line with this new width */
+}
+
+.profile-icon {
+    width: 50px;  /* Reduced profile icon size */
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin: 0 auto 12px;  /* Adjusted margin for smaller icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon img {
+    width: 25px;  /* Reduced icon size inside the circle */
+    height: 25px;
+}
+
+.aboutperson h6 {
+    font-size: 1rem;  /* Smaller name font size */
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.aboutperson p {
+    font-size: 0.9rem;  /* Reduced paragraph font size */
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.aboutperson button {
+    background-color: #006d77;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;  /* Smaller button padding */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aboutperson button:hover {
+    background-color: #028090;
+}
