@@ -282,3 +282,129 @@ h1, h4 {
 .aboutperson button:hover {
     background-color: #028090;
 }
+
+
+/* Contact Us Section */
+/* #contactus {
+    background: url('../images/sample-background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+#contactus {
+    position: relative;
+    background-image: url('../images/bg3.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #006d77;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0 5%;
+}
+
+#contactus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 0;
+}
+
+#contactcontent {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Heading */
+#content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#content h5 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Social Links */
+#sociallinks {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+#sociallinks li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+#sociallinks img {
+    width: 30px;
+    height: 30px;
+    /* filter: invert(); */
+}
+
+/* Contact Form */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#contactForm label {
+    margin: 10px 0 5px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#contactForm textarea {
+    resize: none;
+}
+
+#contactForm button {
+    background-color: #28a745;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#contactForm button:hover {
+    background-color: #218838;
+}
