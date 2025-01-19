@@ -408,3 +408,55 @@ h1, h4 {
 #contactForm button:hover {
     background-color: #218838;
 }
+
+/* Position the recommendation section on the right */
+#recommendationSection {
+    position: absolute;
+    top: 150px; /* Adjust based on your header's height */
+    right: 20px; /* Distance from the right edge */
+    width: 300px; /* Set a fixed width for the recommendations */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears above other elements */
+    overflow-y: auto;
+    max-height: 70vh; /* Limit height with scrolling */
+}
+
+/* Heading for the recommendations section */
+#recommendationSection h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style for individual recommendations */
+#result > div {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Recommendation titles */
+#result h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #444;
+}
+
+/* Recommendation images */
+#result img {
+    width: 100%; /* Fit within the container */
+    height: auto;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Recommendation descriptions */
+#result p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}

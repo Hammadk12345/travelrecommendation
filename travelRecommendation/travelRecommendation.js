@@ -1,17 +1,13 @@
-const input = document.getElementById('searchInput').value.toLowerCase();
 const resultDiv = document.getElementById('result');
-resultDiv.innerHTML = ''; // Clear previous results
 function searchRecommendation() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    resultDiv.innerHTML = ''; // Clear previous results
 
-    fetch('./jsontravelRecommendation_api.json') // Ensure the correct path
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
+    fetch('./travelRecommendation_api.json') // Ensure the correct path
+        .then(response => response.json())
         .then(data => {
-            if (data[input]) {
+
+            if (input === 'countries') {
                 const recommendations = data[input];
                 recommendations.forEach(recommendation => {
                     const { name, cities } = recommendation;
@@ -34,7 +30,19 @@ function searchRecommendation() {
                         });
                     }
                 });
-            } else {
+            } else if(input === 'temples' || input === 'beaches') {
+                const recommendations = data[input];
+                recommendations.forEach(recommendation => {
+                    const {name, imageUrl, description} = recommendation;
+                    const otherDiv = document.createElement('div');
+                    otherDiv.innerHTML = `<h2>${name}</h2>
+                                            <img src ="${imageUrl}">
+                                            <p>${description}</p>`
+                    resultDiv.appendChild(otherDiv)
+                })
+
+            }
+            else {
                 resultDiv.innerHTML = `<p>No recommendations found for "${input}". Please try a valid category like "countries", "temples", or "beaches".</p>`;
             }
         })
@@ -48,7 +56,6 @@ function searchRecommendation() {
 
 function resetRecommendation(){
     document.getElementById('searchInput').value = '';
-    document.getElementById('result').value = '';
     resultDiv.innerHTML = '';
 }
 
